@@ -11,7 +11,7 @@ A portion of the OpenSimNet protocol and documentation is inspired by the Intern
 OpenSimNet uses TCP and UDP port 12280. OpenSimNet connections MUST use TLS.
 
 ## TCP Messages
-Messages are formatted in Javascript Object Notation (JSON). Every message has the key `command` [string], and may have keys `source` [string] and `args` [object]. Example:
+Messages are JSON objects terminated with a single newline (`\n`) character. Newlines are included in this documentation for readability. Every message has the key `command` [string], and may have keys `source` [string] and `args` [object]. Example:
 ```json
 {
     "source": "User01",
