@@ -198,7 +198,7 @@ The server may respond with a `MSG_TOO_LONG` error.
 Command: `PRIVMSG`  
 Arguments accepted:
 
-* `target` [int]: The username of the intended recipient of the message
+* `target` [string]: The username of the intended recipient of the message
 * `message` [string]: The message to be broadcast on the frequency
 
 The server may respond with a `MSG_TOO_LONG` error.
