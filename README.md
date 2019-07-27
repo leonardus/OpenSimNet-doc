@@ -29,7 +29,7 @@ Messages are JSON objects terminated with a single newline (`\n`) character. New
 ```
 
 `source` is the username of the client that the message originates from, if applicable. When sending a message from the client to the server, the client MUST NOT include the source. If the message originates from the server itself, the source MUST NOT be included. `command` is the action that the message is describing. `args` is a list of arguments provided for the command. `args` MAY be ommitted if no arguments are accepted for the command (e.g. the `DISCONNECT` message).
-Empty messages (including messages with no `command` specified) and undefined arguments SHOULD be silently ignored. Unrecognized commands are handled by an `UNKNOWN_COMMAND` error response.
+Empty messages (including messages with no `command` specified) and undefined arguments SHOULD be silently ignored. Unrecognized commands are handled by an `UNKNOWN_COMMAND` error response. Invalid JSON is handled by the `COULD_NOT_PARSE` error response.
 
 ## Registration
 
@@ -242,3 +242,4 @@ Arguments accepted:
 * `NOT_ENOUGH_ARGS`: The client has omitted required arguments for the command
 * `ALREADY_REGISTERED`: The client tried to send the USER message, but it was already sent previously
 * `UNKNOWN_COMMAND`: The command sent by the client was not recognized by the server
+* `COULD_NOT_PARSE`: The server was unable to parse the JSON sent by the client
