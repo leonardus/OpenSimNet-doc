@@ -99,7 +99,7 @@ Arguments accepted:
 * `user` [string]: The username of the user that has joined the server
 * `plane` [string]: The plane being operated by the user
 
-The server sends the `JOIN` message to indicate that a new user has joined the server.
+The server sends the `JOIN` message to indicate that a new user has joined the server. This message is relayed to all clients, including the client that joins.
 
 ### PART message
 
