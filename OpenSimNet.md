@@ -56,7 +56,8 @@ The server may respond with one of the following errors:
 * `UNAUTHORIZED`
 * `SERVER_FULL`
 
-If the login is successful, the server will respond with an `ACK` message.
+If the login is successful, the server will respond with an `ACK` message.  
+Whitespace at the beginning and end of usernames MUST be silently truncated.
 
 ### ACK message
 
