@@ -55,6 +55,7 @@ The server may respond with one of the following errors:
 * `LOGIN_FAILED`
 * `UNAUTHORIZED`
 * `SERVER_FULL`
+* `ALREADY_REGISTERED`
 
 If the login is successful, the server will respond with an `ACK` message.  
 Whitespace at the beginning and end of usernames MUST be silently truncated.
@@ -239,3 +240,4 @@ Arguments accepted:
 * `MSG_TOO_LONG`: The message sent exceeds the server's maximum message length
 * `INVALID_SQUAWK_MODE`: The squawk mode requested is not one of `OFF`, `A`, `AC`, `S`
 * `NOT_ENOUGH_ARGS`: The client has omitted required arguments for the command
+* `ALREADY_REGISTERED`: The client tried to send the USER message, but it was already sent previously
