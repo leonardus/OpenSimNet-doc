@@ -35,7 +35,7 @@ Empty messages (including messages with no `command` specified) and undefined ar
 
 Registration begins with the TCP connection, on port 12280. To register with the server, a client sends the `USER` message.
 
-The client SHOULD send a `STATUS`, `FREQUENCY`, and `SQUAWK` message upon completion of registration. The server MUST send a `SERVER` and `LIST` message upon completion of registration, and a `STATUS` message for all other connected clients. Once registration has completed, the client and server may begin exchanging UDP packets immediately. Until registration has completed, the server MUST silently ignore any UDP packets from the client.
+The client SHOULD send a `STATUS`, `FREQUENCY`, and `SQUAWK` message upon completion of registration. The server MUST send a `SERVER` and `LIST` message upon completion of registration, and a `STATUS` message for all other connected clients. The server will then send a `JOIN` message to all clients, including the client connecting, to indicate that a new client has successfully joined. Once registration has completed, the client and server may begin exchanging UDP packets immediately. Until registration has completed, the server MUST silently ignore any UDP packets from the client.
 
 ## TCP
 
