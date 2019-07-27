@@ -89,7 +89,10 @@ Command: `LIST`
 Arguments accepted:
 
 * `range` [float] *(optional)*: A maximum range, in nautical miles, of clients to return
-* `clients` [array\<object\>]: A list of clients online - each entry in the array is a JSON object with the keys `username`, `callsign` (may or may not exist), and `plane` - **only sent from the server to the client**
+
+#### Server response
+
+* `clients` [array\<object\>]: A list of clients online - each entry in the array is a JSON object with the keys `username`, `callsign` (may or may not exist), and `plane`
 
 ### JOIN message
 
@@ -211,7 +214,10 @@ Command: `METAR`
 Arguments accepted:
 
 * `icao` [string]: The ICAO airport code of the requested METAR information
-* `metar` [string]: The METAR information of the airport - **only sent from the server to the client**
+
+#### Server response
+
+* `metar` [string]: The METAR information of the airport
 
 ### DISCONNECT message
 
