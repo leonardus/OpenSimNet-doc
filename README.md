@@ -136,10 +136,7 @@ Arguments accepted:
 * `ac` [bool]: The status of the anti-collision light
 * `wing` [bool]: The status of the wing light
 * `wwell` [bool]: The status of the weel well light
-* `eng1` [bool]: The status of engine 1
-* `eng2` [bool]: The status of engine 2
-* `eng3` [bool]: The status of engine 3
-* `eng4` [bool]: The status of engine 4
+* `eng` [array<bool>]: The status of each engine
 * `apu` [bool]: The status of the APU
 
 ### FREQUENCY message
