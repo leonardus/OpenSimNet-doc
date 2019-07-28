@@ -128,8 +128,8 @@ Arguments accepted:
 * `landing_fix` [bool]: The status of the fixed landing lights
 * `wiper_l` [int]: The status of the left windshield wiper - `0` is OFF, `1` is INTERMITTENT, `2` is LOW, `3` IS HIGH.
 * `wiper_r` [int]: The status of the right windshield wiper
-* `turnoff_l` [int]: The status of the left runway turnoff light
-* `turnoff_r` [int]: The status of the right runway turnoff light
+* `turnoff_l` [bool]: The status of the left runway turnoff light
+* `turnoff_r` [bool]: The status of the right runway turnoff light
 * `taxi` [bool]: The status of the taxi light
 * `logo` [bool]: The status of the logo light
 * `position` [int]: The status of the position indicator light - `0` is OFF, `1` is STEADY, `2` is STROBE AND STEADY
