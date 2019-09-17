@@ -240,16 +240,16 @@ Arguments accepted:
 
 ### List of possible error messages
 
-* `LOGIN_FAILED`: The username or password provided by the client was incorrect
-* `UNAUTHORIZED`: The user is not authorized to join the server, or is banned from the server
-* `SERVER_FULL`: The server is full, and is unable to accept any more connections
-* `INVALID_CALLSIGN`: The callsign contains illegal characters
-* `RESERVED_CALLSIGN`: The user is not authorized to use the provided callsign
+* `ALREADY_REGISTERED`: The client tried to send the USER message, but it was already sent previously
 * `CALLSIGN_MAX`: The callsign exceeds the maximum length configured by the server
 * `CALLSIGN_MIN`: The callsign is shorter than the minimum length configured by the server
-* `MSG_TOO_LONG`: The message sent exceeds the server's maximum message length
-* `INVALID_SQUAWK_MODE`: The squawk mode requested is not one of `OFF`, `A`, `AC`, `S`
-* `NOT_ENOUGH_ARGS`: The client has omitted required arguments for the command
-* `ALREADY_REGISTERED`: The client tried to send the USER message, but it was already sent previously
-* `UNKNOWN_COMMAND`: The command sent by the client was not recognized by the server
 * `COULD_NOT_PARSE`: The server was unable to parse the JSON sent by the client
+* `INVALID_CALLSIGN`: The callsign contains illegal characters
+* `INVALID_SQUAWK_MODE`: The squawk mode requested is not one of `OFF`, `A`, `AC`, `S`
+* `LOGIN_FAILED`: The username or password provided by the client was incorrect
+* `MSG_TOO_LONG`: The message sent exceeds the server's maximum message length
+* `NOT_ENOUGH_ARGS`: The client has omitted required arguments for the command
+* `RESERVED_CALLSIGN`: The user is not authorized to use the provided callsign
+* `SERVER_FULL`: The server is full, and is unable to accept any more connections
+* `UNAUTHORIZED`: The user is not authorized to join the server, or is banned from the server
+* `UNKNOWN_COMMAND`: The command sent by the client was not recognized by the server
