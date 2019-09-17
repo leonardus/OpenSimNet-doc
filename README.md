@@ -123,21 +123,21 @@ The server sends the `PART` message to indicate that a user has left the server.
 Command: `STATUS`  
 Arguments accepted:
 
+* `ac` [bool]: The status of the anti-collision light
+* `apu` [bool]: The status of the APU
+* `eng` [array\<bool\>]: The status of each engine
 * `gear` [bool]: The status of the landing gear - `false` is up, `true` is down
-* `landing_ret` [bool]: The status of the retractable landing lights
 * `landing_fix` [bool]: The status of the fixed landing lights
-* `wiper_l` [int]: The status of the left windshield wiper - `0` is OFF, `1` is INTERMITTENT, `2` is LOW, `3` IS HIGH.
-* `wiper_r` [int]: The status of the right windshield wiper
-* `turnoff_l` [bool]: The status of the left runway turnoff light
-* `turnoff_r` [bool]: The status of the right runway turnoff light
-* `taxi` [bool]: The status of the taxi light
+* `landing_ret` [bool]: The status of the retractable landing lights
 * `logo` [bool]: The status of the logo light
 * `position` [int]: The status of the position indicator light - `0` is OFF, `1` is STEADY, `2` is STROBE AND STEADY
-* `ac` [bool]: The status of the anti-collision light
+* `taxi` [bool]: The status of the taxi light
+* `turnoff_l` [bool]: The status of the left runway turnoff light
+* `turnoff_r` [bool]: The status of the right runway turnoff light
 * `wing` [bool]: The status of the wing light
+* `wiper_l` [int]: The status of the left windshield wiper - `0` is OFF, `1` is INTERMITTENT, `2` is LOW, `3` IS HIGH.
+* `wiper_r` [int]: The status of the right windshield wiper
 * `wwell` [bool]: The status of the wheel well light
-* `eng` [array\<bool\>]: The status of each engine
-* `apu` [bool]: The status of the APU
 
 Only updated components must be sent. For instance, when the APU is turned on, the client only needs to send the `APU` argument. When the STATUS message is first sent, all components applicable to the plane should be sent by the client.
 
