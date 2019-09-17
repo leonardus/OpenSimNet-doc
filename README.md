@@ -139,6 +139,8 @@ Arguments accepted:
 * `eng` [array\<bool\>]: The status of each engine
 * `apu` [bool]: The status of the APU
 
+Only updated components must be sent. For instance, when the APU is turned on, the client only needs to send the `APU` argument. When the STATUS message is first sent, all components applicable to the plane should be sent by the client.
+
 ### FREQUENCY message
 
 Command: `FREQUENCY`  
