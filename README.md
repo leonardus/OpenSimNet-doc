@@ -210,7 +210,7 @@ Arguments accepted:
 * `message` [string]: The message to be broadcast on the frequency
 
 The server may respond with a `MSG_TOO_LONG` error.  
-The contents of the BROADCAST message is relayed to all other clients on the same frequency.
+The contents of the BROADCAST message is relayed to all other clients with a radio tuned to a frequency matching the `frequency` argument.
 
 ### PRIVMSG message
 
