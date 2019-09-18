@@ -240,6 +240,7 @@ Command: `ERR`
 Arguments accepted:
 
 * `type` [string]: A unique identifier for the error
+* `arg` [string] *(optional)*: The argument which triggered the error
 * `message` [string] *(optional)*: A human-readable message detailing the nature of the error
 
 ### List of possible error messages
