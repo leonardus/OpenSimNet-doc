@@ -128,6 +128,7 @@ Arguments accepted:
 * `eng` [array\<bool\>]: The status of each engine
 * `flaps_current` [int]: The current flaps setting, expressed as an integer. 0 is the lowest flaps setting (that is, retracted) available on the plane. Each subsequent higher setting will increment this number by 1.
 * `flaps_max` [int]: The maximum flaps settings available on the plane. This is to be used as a fallback in the event that another client does not recognize the plane, and this number should *not* be trusted.
+* `spoilers` [int]: Spoiler deployment, expressed as a percentage. Must be in the range of 0 to 100.
 * `gear` [bool]: The status of the landing gear - `false` is up, `true` is down
 * `landing_fix` [bool]: The status of the fixed landing lights
 * `landing_ret` [bool]: The status of the retractable landing lights
