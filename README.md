@@ -86,6 +86,7 @@ Arguments accepted:
 * `callsign_max` [int]: The maximum amount of characters the server will accept in a callsign
 * `slots` [int]: The maximum amount of clients the server will accept
 * `clients` [int]: The amount of clients the server currently has connected
+* `network_rate` [int]: The rate at which UDP packets are sent, expressed in Hz
 * `motd` [string] *(optional)*: A message to be displayed to all clients upon connecting
 * `max_msg_len` [string] *(optional)*: The maximum length for a `PRIVMSG` or `BROADCAST` message
 
