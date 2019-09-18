@@ -146,7 +146,8 @@ Arguments accepted:
 * `wiper_r` [int]: The status of the right windshield wiper
 * `wwell` [bool]: The status of the wheel well light
 
-Only updated components must be sent. For instance, when the APU is turned on, the client only needs to send the `APU` argument. When the STATUS message is first sent, all components applicable to the plane should be sent by the client.
+Only updated components must be sent. For instance, when the APU is turned on, the client only needs to send the `APU` argument. When the STATUS message is first sent, all components applicable to the plane should be sent by the client.  
+The STATUS message may be sent from the server to the client to indicate that another client has updated their STATUS.
 
 ### FREQUENCY message
 
@@ -164,7 +165,8 @@ Arguments accepted:
 * `code` [int]: The squawk code entered into the plane's transponder
 * `mode` [string]: The squawk mode - possible values are `OFF`, `A`, `AC` and `S`
 
-The server may respond with an `INVALID_SQUAWK_MODE` error.
+The server may respond with an `INVALID_SQUAWK_MODE` error.  
+The SQUAWK message may be sent from the server to the client to indicate that another client has changed their squawk mode and/or code.
 
 ### CALLSIGN message
 
@@ -197,6 +199,8 @@ Arguments accepted:
 * `route` [string] *(optional)*: The planned route
 * `remarks` [string] *(optional)*: The flight plan's remarks
 
+The CALLSIGN message may be sent from the server to the client when another client has filed their flight plan.
+
 ### BROADCAST message
 
 Command: `BROADCAST`  
@@ -205,7 +209,8 @@ Arguments accepted:
 * `frequency` [int]: The frequency the message will be broadcast on
 * `message` [string]: The message to be broadcast on the frequency
 
-The server may respond with a `MSG_TOO_LONG` error.
+The server may respond with a `MSG_TOO_LONG` error.  
+The contents of the BROADCAST message is relayed to all other clients on the same frequency.
 
 ### PRIVMSG message
 
@@ -215,9 +220,9 @@ Arguments accepted:
 * `target` [string]: The username of the intended recipient of the message
 * `message` [string]: The message to be broadcast on the frequency
 
-The server may respond with a `MSG_TOO_LONG` error.
-
-Clients SHOULD omit arguments that have already been sent or that are not applicable to the plane.
+The server may respond with a `MSG_TOO_LONG` error.  
+Clients SHOULD omit arguments that have already been sent or that are not applicable to the plane.  
+The contents of the PRIVMSG message is relayed to only the target of the message.
 
 ### METAR message
 
