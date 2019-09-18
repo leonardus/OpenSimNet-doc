@@ -34,7 +34,8 @@ Messages are JSON objects terminated with a single newline (`\n`) character. New
 
 Empty messages (including messages with no `command` specified) and undefined arguments SHOULD be silently ignored.  
 Unrecognized commands are handled by an `UNKNOWN_COMMAND` error response.  
-Invalid JSON is handled by the `COULD_NOT_PARSE` error response.
+Invalid JSON is handled by the `COULD_NOT_PARSE` error response.  
+Any message may return an `INVALID_TYPE` error response if the type of an argument does not match the type supplied by the user. When the server returns an `INVALID_TYPE` error response, the server MUST NOT proceed with executing the user's message.
 
 ## Registration
 
@@ -249,6 +250,7 @@ Arguments accepted:
 * `COULD_NOT_PARSE`: The server was unable to parse the JSON sent by the client
 * `INVALID_CALLSIGN`: The callsign contains illegal characters
 * `INVALID_SQUAWK_MODE`: The squawk mode requested is not one of `OFF`, `A`, `AC`, `S`
+* `INVALID_TYPE`: The type of an argument does not match the type supplied by the user
 * `LOGIN_FAILED`: The username or password provided by the client was incorrect
 * `MSG_TOO_LONG`: The message sent exceeds the server's maximum message length
 * `NOT_ENOUGH_ARGS`: The client has omitted required arguments for the command
