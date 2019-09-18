@@ -33,7 +33,7 @@ Messages are JSON objects terminated with a single newline (`\n`) character. New
 * `args` is a list of arguments provided for the command. `args` MAY be ommitted if no arguments are accepted for the command (e.g. the `DISCONNECT` message).
 
 Client-to-server messages MAY include an integer `id` argument. This integer SHOULD be unique to the message. Server responses to messages with an `id` argument, including `ERR` responses, MUST include the `id` in the response.  
-Empty messages (including messages with no `command` specified) and undefined arguments SHOULD be silently ignored.  
+Empty messages (including messages with no `command` specified) and undefined arguments MUST be silently ignored.  
 Unrecognized commands are handled by an `UNKNOWN_COMMAND` error response.  
 Invalid JSON is handled by the `COULD_NOT_PARSE` error response.  
 Any message may return an `INVALID_TYPE` error response if the type of an argument does not match the type supplied by the user. When the server returns an `INVALID_TYPE` error response, the server MUST NOT proceed with executing the user's message.
